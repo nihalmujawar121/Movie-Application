@@ -1,0 +1,61 @@
+.example-container {
+  margin-left: 40px;
+  padding: 20px;
+  top: 200px;
+  margin-top: 20px;
+}
+
+.example-form-field {
+  margin-right: 20px;
+}
+
+.example-card {
+  /* background-color: rgba(0, 0, 0, 0.208); */
+  background-color: rgba(255, 0, 0, 0.769);
+  /* background-color: darkblue; */
+  /* background-color:rgb(89, 89, 210); */
+  max-width: 400px;
+  margin-bottom: 20px;
+  margin-top: 80px;
+  margin-left: 240px;
+  position: relative;
+  bottom: 600px;
+}
+
+.container {
+  margin-left: 140px;
+  padding-bottom: 10px;
+}
+
+.increaseSize {
+  width: 300px;
+  
+}
+
+.nine {
+  float: right;
+  width: 300px;
+  top: 100px;
+}
+
+.ten {
+  width: 1270px;
+  height: 600px;
+}
+
+.one {
+  position: relative;
+  width: 100%;
+  height: 580px;
+}
+
+.eleven{
+  position: relative;
+  bottom: 560px;
+  margin-left: 370px;
+  /* color: rgb(209, 209, 54); */
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

@@ -1,0 +1,123 @@
+
+<img class="twelve" src="https://img.freepik.com/free-vector/social-distancing-prevention-method-cinemas_23-2148573481.jpg?w=900&t=st=1695963208~exp=1695963808~hmac=dc3f911ab224ed0b0daa7b837cbd25c6d89e529ee49a26a0873e01175c17b81c" alt="Not Found">
+<p class="thirteen">Welcome to the app!</p>
+<mat-card class="example-card">
+  <div class="container2">Registration Form</div>
+
+  <div class="container1">
+    <form [formGroup]="registerForm">
+      <!-- UserName -->
+      <div class="one">
+        <div>
+          <mat-form-field class="increaseSize">
+            <input matInput placeholder="Username" formControlName="userName" />
+            <mat-error
+              *ngIf="userNameValidator?.touched && userNameValidator?.invalid"
+            >
+              <span *ngIf="userNameValidator?.errors?.['required']">
+                Username is required
+              </span>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="eleven">
+        <mat-form-field class="increaseSize">
+          <input
+            type="password"
+            matInput
+            placeholder="Password"
+            formControlName="password"
+          />
+          <mat-error
+            *ngIf="passwordValidator?.touched && passwordValidator?.invalid"
+          >
+            <span *ngIf="passwordValidator?.errors?.['required']">
+              Password is Required
+            </span>
+            <span *ngIf="passwordValidator?.errors?.['pattern']">
+              It should have one symbol,digit,upper,lowercase letter
+            </span>
+            <span *ngIf="passwordValidator?.errors?.['minlength']">
+              It Should have minimum 8 length
+            </span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <!-- Email -->
+      <div class="one">
+        <div class="six">
+          <mat-form-field class="increaseSize">
+            <input
+              type="email"
+              matInput
+              placeholder="Email"
+              formControlName="userEmailID"
+            />
+
+            <mat-error
+              *ngIf="emailValidator?.touched && emailValidator?.invalid"
+            >
+              <span *ngIf="emailValidator?.errors?.['required']">
+                Email is Required
+              </span>
+              <span *ngIf="emailValidator?.errors?.['pattern']">
+                It should have one symbol,digit,upper,lowercase letter
+              </span>
+
+              <span *ngIf="emailValidator?.errors?.['minlength']">
+                It Should have minimum 8 length
+              </span>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <!-- phoneNumber -->
+      <div class="con1">
+        <mat-form-field class="increaseSize">
+          <input
+            matInput  type="text"
+            placeholder="Phone Number"
+            formControlName="mobileNumber"
+          />
+          <mat-error
+            *ngIf="
+            mobileNumberValidator?.touched && mobileNumberValidator?.invalid
+            "
+          >
+            <span *ngIf="mobileNumberValidator?.errors?.['required']">
+              phoneNumber is required
+            </span>
+
+            <span
+              *ngIf="mobileNumberValidator?.errors?.['ShouldBeGreaterthan9Digit']"
+            >
+              Phone Number should have 10 digit
+            </span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="con2">
+        <button mat-raised-button color="primary">Reset</button>
+
+        <span class="con3">
+          <button
+            mat-raised-button
+            [disabled]="registerForm.invalid"
+            (click)="openSnackBar()"
+            aria-label="Show an example snack-bar"
+          >
+            Submit
+          </button>
+
+          <!-- <button mat-raised-button   (click)="openSnackBar()" aria-label="Show an example snack-bar" >Submit</button> -->
+        </span>
+      </div>
+    </form>
+  </div>
+</mat-card>

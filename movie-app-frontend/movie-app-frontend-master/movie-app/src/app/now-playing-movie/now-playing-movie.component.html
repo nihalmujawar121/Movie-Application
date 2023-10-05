@@ -1,0 +1,24 @@
+<h1>
+	<span>NOW</span>
+	<span>PLAYING</span>
+	<span>MOVIES</span>
+</h1>
+
+<div class="one">
+	<div class="three" *ngFor="let m of nowPlaying">
+		<img
+			class="two"
+			[src]="'https://image.tmdb.org/t/p/' + imageSize + m.backdrop_path"
+			alt="image not found"
+		/>
+		<p class="four">{{ m.original_title }}</p>
+		<div class="five">
+			<button routerLink="/viewMovieDetails/{{ m.id }}">
+				<img class="image" src="../../assets/download-i.png" alt="" />
+			</button>
+			<button (click)="addMovieToFavorites(m)">
+				<img class="image" src="../../assets/plus3.png" alt="" />
+			</button>
+		</div>
+	</div>
+</div>

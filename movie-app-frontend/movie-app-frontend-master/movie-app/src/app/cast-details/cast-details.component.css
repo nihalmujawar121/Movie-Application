@@ -1,0 +1,23 @@
+.one {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    background-color:rgba(0, 0, 0, 0.838);
+  }
+
+
+  .two {
+    height: 250px;
+    width: 230px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  
+  .card:hover {
+    transform: translateY(15px);
+  }
+  
+  .card{
+    margin-top: 20px;
+  }

@@ -1,0 +1,51 @@
+<div class="o">
+	<div class="one">
+		<div class="two" *ngFor="let m of allData; let i = index">
+			<img
+				[src]="
+					'https://image.tmdb.org/t/p/' + imageSize + m.backdrop_path
+				"
+				alt="Not found"
+			/>
+			<p class="three">{{ m.original_title }}</p>
+			<!-- <p>{{m.id}}</p> -->
+			<button
+				class="ten"
+				mat-raised-button
+				color="raised"
+				routerLink="/video-player/{{ m.id }}"
+			>
+				<span class="ten" class="material-symbols-outlined">
+					play_circle
+				</span>
+			</button>
+			<div class="example-button-container">
+				<button
+					mat-fab
+					color="warn"
+					aria-label="Example icon button with a delete icon"
+					(click)="deleteFromFavorites(m.original_title)"
+				>
+					<mat-icon>delete</mat-icon>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<h1>These are Recommended Movies</h1>
+
+	<div class="one">
+		<div class="two" *ngFor="let recommendation of recommendationData">
+			<img
+				[src]="
+					'https://image.tmdb.org/t/p/' +
+					imageSize +
+					recommendation.backdrop_path
+				"
+				alt="Not Found"
+			/>
+			<p class="four">Title: {{ recommendation.title }}</p>
+			<!-- <p>Overview: {{ recommendation }}</p> -->
+		</div>
+	</div>
+</div>

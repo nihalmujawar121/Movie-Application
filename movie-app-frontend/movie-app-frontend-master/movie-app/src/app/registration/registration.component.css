@@ -1,0 +1,98 @@
+.mat-mdc-radio-button ~ .mat-mdc-radio-button {
+  margin-left: 16px;
+}
+
+.one{
+  display: flex;
+  margin-top: 20px;
+  /* padding-bottom: 40px; */
+}
+
+.con1{
+  margin-left: -5px;
+  margin-top: -20px;
+
+}
+.increaseSize{
+  width: 450px;
+}
+.con2{
+  margin-left: 90px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  
+}
+.con3{
+  margin-left: 50px;
+}
+.container1{
+  
+  margin-left: 70px;
+  width:500px;
+   
+}
+.container2{
+  margin-top: 20px;
+  margin-left: 220px;
+  font-size: larger;
+  color: black;
+
+}
+
+mat-form-field {
+  margin-right: 12px;
+}
+
+.example-card {
+  background-color: lightblue;
+  top:-100px;
+  max-width: 600px;
+  margin-right: 200px;
+  margin-top: 150px;
+  margin-left: 340px;
+  margin-bottom: 900px;
+  
+}
+
+.six{ 
+  padding-bottom: 40px;
+ 
+}
+
+.eight{
+position: relative;
+width: 1265px;
+bottom: 55px;
+height: 800px;
+
+}
+
+.ten{
+  position: absolute;
+}
+
+.three{
+  position: relative;
+  font-size: 25px;
+  bottom: 960px;
+  color: red;
+  font-family:cursive;
+}
+.eleven{
+  margin-top: 30px;
+}
+
+.twelve{
+  position: absolute;
+  width: 100%;
+}
+
+.thirteen{
+  margin-top: 10px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  position: relative;
+   margin-left: 550px;
+   font-size: 20px;
+}
+

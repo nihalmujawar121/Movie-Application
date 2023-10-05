@@ -1,0 +1,22 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: apigateway-service
+  main:
+    web-application-type: reactive
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+
+    eureka:
+      client:
+        serviceUrl:
+          defaultZone: http://movieeurekaservice:8761/eureka
+        fetch-registry: true
+        register-with-eureka: true

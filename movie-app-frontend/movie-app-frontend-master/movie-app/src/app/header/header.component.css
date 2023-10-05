@@ -1,0 +1,21 @@
+.one {
+  background-color: black;
+}
+.two {
+  color: white;
+  color: white;
+  display: flex;
+  margin-left: 20px;
+}
+
+.nine {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.four {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  margin-left: 805px;
+}

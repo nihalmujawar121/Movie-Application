@@ -1,0 +1,11 @@
+package com.example.UserAuthentication.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(reason = "User already registered!", code = HttpStatus.CONFLICT)
+public class UserAlreadyRegisteredException extends Exception {
+    public UserAlreadyRegisteredException(String message) {
+        super(message);
+    }
+}

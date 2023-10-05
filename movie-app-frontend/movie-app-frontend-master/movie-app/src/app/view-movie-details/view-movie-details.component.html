@@ -1,0 +1,79 @@
+<div>
+	<img
+		class="one"
+		[src]="
+			'https://image.tmdb.org/t/p/' +
+			imageSize +
+			movieDetails.backdrop_path
+		"
+		alt="image not found"
+	/>
+	<img
+		class="two"
+		[src]="
+			'https://image.tmdb.org/t/p/' +
+			imageSize +
+			movieDetails.backdrop_path
+		"
+		alt="image not found"
+	/>
+
+	<div class="two">
+		<p class="three">
+			&nbsp; &nbsp;{{ movieDetails.original_title }} ({{
+				movieDetails.release_date
+			}})
+		</p>
+		<div class="four">
+			<div *ngFor="let genre of movieDetails.genres">
+				<span>&nbsp; &nbsp;{{ genre.name }}</span>
+			</div>
+		</div>
+
+		<!-- <p>&nbsp; &nbsp;Popularity : {{movieDetails.popularity}}</p> -->
+		<div class="six">
+			<p class="six">OverView</p>
+		</div>
+		<div class="five">
+			<p class="five">&nbsp; &nbsp;{{ movieDetails.overview }}</p>
+		</div>
+
+		<!-- <button mat-raised-button color="primary">Primary</button> -->
+		<div class="six">
+			<p class="six">Author</p>
+		</div>
+
+		<div class="seven">
+			<div *ngFor="let reviewItem of review">
+				<p>{{ reviewItem.author }}</p>
+			</div>
+		</div>
+
+		<button
+			class="eight"
+			mat-raised-button
+			color="warn"
+			routerLink="/cast-details/{{ movieDetails.id }}"
+		>
+			CastDetails
+		</button>
+		<!-- <button  routerLink="/video-player/{{movieDetails.id}}">Play</button> -->
+		<button
+			class="ten"
+			mat-raised-button
+			color="raised"
+			routerLink="/video-player/{{ movieDetails.id }}"
+		>
+			<span class="ten" class="material-symbols-outlined">
+				play_circle
+			</span>
+		</button>
+
+		<div class="nine">
+			<div class="nine" *ngFor="let reviewItem of review">
+				<!-- <span>Author: {{ reviewItem.author }}</span> -->
+				<span>Review: {{ reviewItem.content }}</span>
+			</div>
+		</div>
+	</div>
+</div>

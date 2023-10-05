@@ -1,0 +1,133 @@
+<button
+	class="fi"
+	id="one"
+	(click)="logOut()"
+	mat-fab
+	color="accent"
+	aria-label="Example icon button with a bookmark icon"
+>
+	<span class="material-symbols-outlined"> logout </span>
+</button>
+
+<div class="image-container">
+	<img
+		class="three"
+		src="https://img.freepik.com/free-vector/showtime-cinema-background-with-film-strip-reel_1017-26098.jpg?size=626&ext=jpg&ga=GA1.2.1806501011.1695815561&semt=ais"
+		alt="image"
+	/>
+
+	<input
+		type="text"
+		placeholder="Search movie by name"
+		[(ngModel)]="searchQuery"
+		class="search1 col-8"
+	/>
+	<button type="button" (click)="search()" class="btn bg-danger col-1 search">
+		Search
+	</button>
+</div>
+
+
+<div class="con5" *ngIf="searchResults">
+
+    <div class="con6" *ngFor="let movie of searchResults">
+          <img
+          class="eleven"
+          [src]="'https://image.tmdb.org/t/p/' + imageSize + movie.backdrop_path" />
+         <p class="container6">{{ movie.original_title }}</p> 
+</div>
+</div>
+
+
+<div class="m-2">
+	&nbsp;
+	<button
+		mat-raised-button
+		class="btn btn-success col-2"
+		routerLink="/now-playing-movie"
+	>
+		Now Playing</button
+	>&nbsp;&nbsp;&nbsp;&nbsp;
+	<button
+		mat-raised-button
+		class="btn btn-danger col-2"
+		routerLink="/top-rated-movie"
+	>
+		Top Rated
+	</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<button
+		mat-raised-button
+		class="btn btn-primary col-2"
+		routerLink="/popular-movie"
+	>
+		Popular</button
+	>&nbsp;&nbsp;&nbsp;&nbsp;
+	<button
+		mat-raised-button
+		class="btn btn-success col-2"
+		routerLink="/upcoming-movie"
+	>
+		Upcoming
+	</button>
+</div>
+
+
+
+<div class="col one">
+	<div
+		*ngFor="
+			let movie of movieData;
+			let i = index;
+			let j = index;
+			let m = index
+		"
+	>
+		<div class="card m-2 d-flex justify-content-around bg-dark ten">
+			<div class="header d-flex justify-content-end bg-dark">
+				<mat-menu #movieMenu="matMenu">
+					<button
+						mat-menu-item
+						routerLink="/viewMovieDetails/{{ getMovieId[j] }}"
+					>
+						<img
+							class="image"
+							src="../../assets/download-i.png"
+							alt="i"
+						/>
+					</button>
+					<app-add-to-favorites
+						[movieObj]="movieAllData[m]"
+					></app-add-to-favorites>
+				</mat-menu>
+				<button class="button" [matMenuTriggerFor]="movieMenu">
+					...
+				</button>
+			</div>
+
+			<div class="card-body">
+				<img
+					class="two"
+					[src]="
+						'https://image.tmdb.org/t/p/' +
+						imageSize +
+						movieImage[i]
+					"
+				/>
+			</div>
+			<div class="card-footer text-center" style="color: white">
+				<h3>{{ movie }}</h3>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="example-button-container" routerLink="/show-favorites">
+	<button
+		mat-fab
+		color="warn"
+		aria-label="Example icon button with a bookmark icon"
+	>
+		<mat-icon>bookmark</mat-icon>
+	</button>
+</div>

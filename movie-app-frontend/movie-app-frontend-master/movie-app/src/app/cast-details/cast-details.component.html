@@ -1,0 +1,24 @@
+<div class="one">
+  <div *ngFor="let castMember of movieDetail; let i = index; let k = index">
+    <div class="col">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <img
+            class="two"
+            [src]="
+              'https://image.tmdb.org/t/p/' + imageSize + image[i].profile_path
+            "
+            alt=""
+          />
+          <h3 class="card-title">
+            Original Name: {{ castMember.original_name }}
+          </h3>
+          <p class="card-text">Character: {{ castMember.character }}</p>
+          <p class="card-text">
+            Known for Department : {{ castMember.known_for_department }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
